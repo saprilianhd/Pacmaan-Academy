@@ -30,3 +30,6 @@ Program Objective :
 - Clearing all transaction order information to Super Cashier
 
 **E. Program Description**
+Create functions for each features
+![image](https://user-images.githubusercontent.com/63135748/232183465-0f2bfdd0-f6d2-45e1-af85-f3cc7daaadac.png)
+![image](https://user-images.githubusercontent.com/63135748/232183482-81d0cb81-2401-4ef0-ae83-a4da97a4ec20.png)
