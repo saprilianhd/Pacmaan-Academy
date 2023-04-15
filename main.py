@@ -55,7 +55,7 @@ class Transaction:
 
     def reset_transaction(self):
         self.transaction_list.clear()
-        print('Transaksi berhasil di hapus')
+        print('Transaksi berhasil di hapus\n')
 
 # example usage:
 def main_menu():
@@ -63,7 +63,7 @@ def main_menu():
     print("-------------------------------")
     print("Selamat Datang di Super Cashier")
     print("-------------------------------\n")
-    
+
     while True:
         print('1. Tambahkan Item')
         print('2. Hapus Item')
