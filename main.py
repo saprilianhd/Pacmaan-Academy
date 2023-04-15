@@ -60,7 +60,10 @@ class Transaction:
 # example usage:
 def main_menu():
     transaction_list = []
-
+    print("-------------------------------")
+    print("Selamat Datang di Super Cashier")
+    print("-------------------------------\n")
+    
     while True:
         print('1. Tambahkan Item')
         print('2. Hapus Item')
