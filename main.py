@@ -1,3 +1,5 @@
+'''Ini adalah program utama untuk menjalan super cashier'''
+  
 from dataclasses import dataclass
 from tabulate import tabulate
 
@@ -8,24 +10,16 @@ class Transaction:
     price: int
     transaction_list: list = None
 
-    #sudah dihapus karena mengakibatkan outputnya double
-    #def __post_init__(self):
-        #if self.transaction_list is None:
-            #self.transaction_list = []
-        #self.transaction_list.append(self)
-
     def check_order(self):
         if self.numb_item is not None or self.price is not None:
-            print("Your order is correct")
             headers = ['Nama Item', 'Jumlah Item', 'Harga/Item', 'Total Harga']
             if len(self.transaction_list) > 1:
                 headers = headers[:4] + [''] * 2 + [headers[-1]]
             rows = [[t.name_item, t.numb_item, t.price, t.numb_item * t.price] for t in self.transaction_list]
             print(tabulate(rows, headers=headers))
         else:
-            print("Your ordering input is incorrect")
+            print("Maaf, keranjang anda sedang kosong")
 
-    #masi bermaslah belum bisa update  (solve)
     def update_item(self, new_name_item, new_numb_item, new_price):
         for transaction in self.transaction_list:
             #if transaction.name_item == name_item:
@@ -61,55 +55,59 @@ class Transaction:
 
     def reset_transaction(self):
         self.transaction_list.clear()
-        print('Semua item berhasil di delete')
+        print('Transaksi berhasil di hapus')
 
 # example usage:
 def main_menu():
     transaction_list = []
 
     while True:
-        print('1. Add Item')
-        print('2. Delete Item')
-        print('3. Check Order')
-        print('4. Update Item')
-        print('5. Total Price')
+        print('1. Tambahkan Item')
+        print('2. Hapus Item')
+        print('3. Cek Order')
+        print('4. Perbaharui Item')
+        print('5. Lihat Total Harga')
         print('6. Hapus Transaksi')
-        print('7. Exit')
+        print('7. Keluar')
         choice = input('Enter choice: ')
 
         if choice == '1':
             try:
-                name_item = input('Enter name of item: ')
-                numb_item = int(input('Enter quantity of item: '))
-                price = int(input('Enter price of item: '))
+                name_item = input('Masukkan nama Item: ')
+                numb_item = int(input('Masukkan jumlah Item: '))
+                price = int(input('Masukkan harga per Item: '))
                 trnsct = Transaction(name_item, numb_item, price, transaction_list)
                 transaction_list.append(trnsct)
+                print(f"Item {name_item} berhasil ditambahkan\n")
             except ValueError:
                 print('Input salah. Silakan masukkan angka pada harga dan kuantitas')
 
         elif choice == '2':
-            name_item = input('Enter name of item to be deleted: ')
+            name_item = input('Masukkan nama Item yang ingin di hapus: ')
             for transaction in transaction_list:
                 if transaction.name_item == name_item:
                     transaction_list.remove(transaction)
+                    print(f'Item {name_item} berhasil dihapus\n')
                     break
             else:
-                print(f'Item {name_item} not found in transaction list')
+                print(f'Item {name_item} tidak ditemukan di dalam list transaksi')
 
         elif choice == '3':
             trnsct.check_order()
+            print('\n')
 
         elif choice == '4':
-            name_item = input('Enter name of item to be updated: ')
-            new_name_item = input('Enter new name of item: ')
-            new_numb_item = int(input('Enter new quantity of item: '))
-            new_price = int(input('Enter new price of item'))
+            name_item = input('Masukkan nama item yang mau di update: ')
+            new_name_item = input('Masukkan nama item yang baru: ')
+            new_numb_item = int(input('Masukkan jumlah item yang baru: '))
+            new_price = int(input('Masukkan harga item yang baru'))
             for transaction in transaction_list:
                 if transaction.name_item == name_item:
                   transaction.update_item(new_name_item, new_numb_item, new_price)
+                  print(f'Item {name_item} berhasil di perbarui\n')
                   break
             else:
-                print(f'Item {name_item} not found in transaction list')
+                print(f'Item {name_item} tidak ditemukan didalam list transaksi')
 
         elif choice == '5':
             Transaction.total_price_all(transaction_list)
@@ -118,10 +116,16 @@ def main_menu():
             trnsct.reset_transaction()
 
         elif choice == '7':
-            break
+            print('\nTerima kasih sudah menggunakan layanan super cashier')
+            print('----------------------------------------------------\n')
+            keluar = input("Apakah anda yakin ingin keluar dari program ? (Y/N): ").lower()
+            if keluar == 'y':
+                break
+            else:
+                main_menu()
 
         else:
-            print('Invalid choice, please try again')
+            print('Pilihan tidak tersedia, silakan coba lagi!')
             main_menu()
 
 if __name__ == '__main__':
