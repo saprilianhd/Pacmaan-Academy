@@ -69,5 +69,5 @@ Setelah customer selesai belanja akan menghitung total belanja yang akan dibayar
 
 ![image](https://user-images.githubusercontent.com/63135748/232190250-817e4145-d054-4098-8d0d-9326f6993eda.png)
 
-Author Copyright (c) 2023 Saprilian Hidayat
+**Author** Copyright (c) 2023 *Saprilian Hidayat*
 
