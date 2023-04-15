@@ -38,5 +38,36 @@ Create functions for each features
 ![image](https://user-images.githubusercontent.com/63135748/232187114-721659ee-df83-4f25-9ec3-8f2a4f1e4260.png)
 ![image](https://user-images.githubusercontent.com/63135748/232187126-b9fd608d-aacc-47ae-8c7c-6e100c1fa949.png)
 
+**F. Test Cases & Results**
 
+-Test case 1:
+Customer ingin menambahkan dua item baru menggunakan method `add_item()`. Item yang ditambahkan adalah sebagai berikut :
+  - Nama item : Ayam Goreng, QTY : 2, Harga : 20000
+  - Nama item : Pasta gigi, QTY : 3, Harga : 15000
+Expected output:
+
+![image](https://user-images.githubusercontent.com/63135748/232187338-1771b016-91e6-44c0-8bb9-19d5ab1cdff3.png)
+
+![image](https://user-images.githubusercontent.com/63135748/232187369-d6ab5d04-d4e8-4065-b643-dd94829cf5e5.png)
+
+-Test case 2:
+Ternyata customer salah membeli salah satu item dari belanjaan yang sudah ditambahkan maka customer menggunakan method `delete_item()` untuk menghapus item. Item yang ingin dihapus adalah **Pasta Gigi**.
+
+Expected Output:
+
+![image](https://user-images.githubusercontent.com/63135748/232187485-64e5bb9c-5e30-431d-94b2-b0298aaffb22.png)
+
+- Test case 3
+Ternyata setelah dipikir pikir customer salah memasukkan item yang ingin dibelanjakan. Daripada menghapus satu satu, maka customer cukup menggunakan method `rest_tyransaction()`untuk menghapus semua item yang sudah ditambhakan. 
+
+Expected Output :
+
+![image](https://user-images.githubusercontent.com/63135748/232189788-4f9367e7-b2a2-4cb3-af03-9148940151bf.png)
+
+-Test case 4:
+Setelah customer selesai belanja akan menghitung total belanja yang akan dibayarkan menggunakan method `total_price()`. Sebelum mengeluarkan output total belanja akan menampilkan itm item yang dibeli.
+
+![image](https://user-images.githubusercontent.com/63135748/232190250-817e4145-d054-4098-8d0d-9326f6993eda.png)
+
+Author Copyright (c) 2023 Saprilian Hidayat
 
