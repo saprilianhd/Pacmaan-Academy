@@ -41,7 +41,7 @@ class Transaction:
     @classmethod
     def total_price_all(cls, transaction_list):
         total_price = sum([t.numb_item * t.price for t in transaction_list])
-        print(f'Total Price for all transactions: {total_price}')
+        print(f'Total belanja untuk semua transaksi: {total_price}')
         if total_price > 500_000:
             print('10% Discount Applied')
             total_price *= 0.9
@@ -51,11 +51,11 @@ class Transaction:
         elif total_price > 200_000:
             print('5% Discount Applied')
             total_price *= 0.95
-        print(f'Total Price after Discount: {total_price}')
+        print(f'Total Harga yang harus dibayar setelah discount: {total_price}\n')
 
     def reset_transaction(self):
         self.transaction_list.clear()
-        print('Transaksi berhasil di hapus\n')
+        print('Semua item berhasil di delete\n')
 
 # example usage:
 def main_menu():
@@ -113,6 +113,8 @@ def main_menu():
                 print(f'Item {name_item} tidak ditemukan didalam list transaksi')
 
         elif choice == '5':
+            trnsct.check_order()
+            print('\n')
             Transaction.total_price_all(transaction_list)
                 
         elif choice == '6':
