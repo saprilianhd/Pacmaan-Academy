@@ -35,3 +35,8 @@ Program Objective :
 **E. Program Description**
 Create functions for each features
 
+![image](https://user-images.githubusercontent.com/63135748/232187114-721659ee-df83-4f25-9ec3-8f2a4f1e4260.png)
+![image](https://user-images.githubusercontent.com/63135748/232187126-b9fd608d-aacc-47ae-8c7c-6e100c1fa949.png)
+
+
+
