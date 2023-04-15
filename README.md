@@ -40,11 +40,11 @@ Create functions for each features
 
 
 **F. Guide to Try it by yourself**
-  1. Clone/downlaod git repository ini into your local computer. It seharusnya berisi:
+  1. Clone/downlaod this git repository into your local computer. It should contain:
 ![image](https://user-images.githubusercontent.com/63135748/232190381-4118f639-842a-420f-a5d8-12c808f9cadf.png)
 
-  2. Buka terminal > go to git repository file on your local computer
-  3. Jalankan "python main.py" file pada terminal. seperti screnshoot dibawah ini:
+  2. Open terminal > go to git repository file on your local computer
+  3. Execute "python main.py" file on your terminal. Refer to screenshot below:
 
 ![image](https://user-images.githubusercontent.com/63135748/232190444-7e7d51b6-d7c2-4302-9255-3cd0583abd1b.png)
 
@@ -79,6 +79,11 @@ Expected Output :
 Setelah customer selesai belanja akan menghitung total belanja yang akan dibayarkan menggunakan method `total_price()`. Sebelum mengeluarkan output total belanja akan menampilkan itm item yang dibeli.
 
 ![image](https://user-images.githubusercontent.com/63135748/232190250-817e4145-d054-4098-8d0d-9326f6993eda.png)
+
+**Improvement Suggestions**
+  1. Membjuat program lebih advance seperti menambahkan warna.
+  2. Menambahkan syntax clear ketika satu program telah selesai dijalankan, jadi ketika ingin memilih fitur lainnya output pada terminal hanya menampilkan program yang sedang dijalankan.
+  3. Perbaikan lainnya yang mungkin ditemukan setelah program digunakan oleh beberapa user.
 
 **Author** Copyright (c) 2023 *Saprilian Hidayat*
 
