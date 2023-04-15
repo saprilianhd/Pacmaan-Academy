@@ -38,7 +38,18 @@ Create functions for each features
 ![image](https://user-images.githubusercontent.com/63135748/232187114-721659ee-df83-4f25-9ec3-8f2a4f1e4260.png)
 ![image](https://user-images.githubusercontent.com/63135748/232187126-b9fd608d-aacc-47ae-8c7c-6e100c1fa949.png)
 
-**F. Test Cases & Results**
+
+**F. Guide to Try it by yourself**
+  1. Clone/downlaod git repository ini into your local computer. It seharusnya berisi:
+![image](https://user-images.githubusercontent.com/63135748/232190381-4118f639-842a-420f-a5d8-12c808f9cadf.png)
+
+  2. Buka terminal > go to git repository file on your local computer
+  3. Jalankan "python main.py" file pada terminal. seperti screnshoot dibawah ini:
+
+![image](https://user-images.githubusercontent.com/63135748/232190444-7e7d51b6-d7c2-4302-9255-3cd0583abd1b.png)
+
+ 
+**G. Test Cases & Results**
 
 -Test case 1:
 Customer ingin menambahkan dua item baru menggunakan method `add_item()`. Item yang ditambahkan adalah sebagai berikut :
